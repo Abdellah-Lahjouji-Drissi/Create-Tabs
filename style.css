@@ -1,0 +1,89 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Rubik:wght@300;500;600&family=Work+Sans:wght@100;300&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto , sans-serif;
+   box-sizing: border-box;
+  }
+
+body{
+    background-color: #f1f3f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.container{
+    width: 700px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px rgba(0, 0,0,.1);
+    padding: 30px;
+}
+
+.tab-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #e9ecef;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+}
+
+.tab-box .tab-btn{
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    background: none;
+    color: #adb5bd;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.content-box{
+    padding: 20px;
+
+}
+
+
+.content-box .content h2{
+    margin-bottom: 10px;
+}
+
+.content-box .content{
+    display: none;
+    animation: moving .5s ease;
+}
+
+@keyframes moving {
+    from{transform: translateX(50px); 
+    opacity: 0;}
+    to{transform: translateX(0px); 
+        opacity: 1;}
+}
+
+.content-box .content.active{
+   display: block;
+}
+
+.tab-box .tab-btn.active{
+    color: #9775fa;
+    margin-bottom: 15px;
+}
+
+.line{
+    position: absolute;
+    background-color: #9775fa;
+    width: 90px;
+    height: 5px;
+    border-radius: 10px;
+    top: 62px;
+    left: 18px;
+    transition: all 0.3s ease-in-out;
+
+}
